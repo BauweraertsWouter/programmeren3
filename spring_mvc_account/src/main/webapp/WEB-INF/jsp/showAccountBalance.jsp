@@ -4,6 +4,6 @@
     <title>Account Balance</title>
   </head>
   <body>
-  Current account balance: &euro;${account}
+  Current account balance: &euro;${account.getBalance()}
   </body>
 </html>
