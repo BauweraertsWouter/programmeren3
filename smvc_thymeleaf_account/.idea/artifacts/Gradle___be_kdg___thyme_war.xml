@@ -1,11 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="Gradle : be.kdg : smvc_thymeleaf_account-1.0.war">
+  <artifact type="war" name="Gradle : be.kdg : thyme.war">
     <output-path>$PROJECT_DIR$/out/artifacts/smvc_thymeleaf_account</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$" />
     </properties>
-    <root id="archive" name="smvc_thymeleaf_account-1.0.war">
-      <element id="javaee-facet-resources" facet="smvc_thymeleaf_account_main/web/Web Gradle : smvc_thymeleaf_account-1.0.war" />
+    <root id="archive" name="thyme.war">
+      <element id="javaee-facet-resources" facet="smvc_thymeleaf_account_main/web/Web Gradle : thyme.war" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="smvc_thymeleaf_account_main" />
@@ -29,7 +29,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/smvc_thymeleaf_account/exploded/smvc_thymeleaf_account-1.0.war/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/smvc_thymeleaf_account/exploded/thyme.war/META-INF/MANIFEST.MF" />
       </element>
     </root>
   </artifact>

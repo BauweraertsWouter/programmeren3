@@ -17,3 +17,8 @@ dependencies {
     compile(group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.1.RELEASE')
     testCompile(group: 'junit', name: 'junit', version: '4.11')
 }
+
+war {
+    archiveName('thyme.war')
+}
+
