@@ -19,8 +19,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gradle_java_web_option_main" target="1.8" />
-      <module name="gradle_java_web_option_test" target="1.8" />
       <module name="thread_safety_main" target="1.8" />
       <module name="thread_safety_test" target="1.8" />
     </bytecodeTargetLevel>
