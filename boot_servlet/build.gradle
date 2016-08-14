@@ -1,0 +1,30 @@
+group 'be.kdg'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+    }
+}
+
+jar {
+    baseName = 'basicservlet'
+    version =  '0.1.0'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.4.0.RELEASE')
+    testCompile(group: 'junit', name: 'junit', version: '4.11')
+}
