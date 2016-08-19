@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ClassNotFound - Home</title>
+</head>
+<body>
+    <h1>Popular Questions Today</h1>
+    <ul>
+        <li th:each="question : ${questions}" th:text="${question.subject}"></li>
+    </ul>
+</body>
+</html>
