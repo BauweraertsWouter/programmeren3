@@ -11,24 +11,24 @@ import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
-@Table(name="QUESTION")
+@Table(name = "QUESTION")
 public class Question {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name="QUE_ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "QUE_ID")
     private long id;
 
-    @Column(name="QUE_SUBJECT", length=100, nullable=false)
+    @Column(name = "QUE_SUBJECT", length=100, nullable = false)
     private String subject;
 
-    @Column(name="QUE_BODY", length=1000, nullable=false)
+    @Column(name = "QUE_BODY", length=1000, nullable = false)
     private String body;
 
-    @Column(name="QUE_SCORE", nullable=false)
+    @Column(name = "QUE_SCORE", nullable = false)
     private int score;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name="QUE_TIMESTAMP", nullable = false)
+    @Column(name = "QUE_TIMESTAMP", nullable = false)
     private Date timestamp;
 
     protected Question() {
