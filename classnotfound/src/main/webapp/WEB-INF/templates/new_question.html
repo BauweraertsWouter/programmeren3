@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Nieuwe Vraag</title>
 </head>
 <body>
-    <!-- TODO: fix the action for readability; Thymeleaf should be able to help with this. -->
-    <form action="../q" method="POST">
+    <form th:action="@{/q}" method="POST">
         <label for="subject">Onderwerp</label>
         <input id="subject" type="text" name="subject">
         <label for="body">Bericht</label>
