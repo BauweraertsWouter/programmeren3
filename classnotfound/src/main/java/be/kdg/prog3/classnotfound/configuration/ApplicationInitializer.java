@@ -6,7 +6,7 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{
-                ApplicationDbConfig.class
+                ApplicationDbConfig.class, ApplicationSecurityConfig.class
         };
     }
 

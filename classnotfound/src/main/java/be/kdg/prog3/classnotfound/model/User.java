@@ -5,15 +5,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @SequenceGenerator(name="u_seq", sequenceName="USER_SEQUENCE", allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="u_seq")
     @Column(name = "USE_ID")
     private long id;
+
+    @Column(name = "USE_NAME", length=20, nullable = false)
+    private String name;
 
     @Column(name = "USE_EMAIL", length=100, nullable = false)
     private String email;
@@ -29,5 +34,15 @@ public class User {
         this.password = password;
     }
 
-    // TODO: getters
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

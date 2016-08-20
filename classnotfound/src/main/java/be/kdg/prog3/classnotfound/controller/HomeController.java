@@ -11,8 +11,12 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    @Autowired
     private QuestionRepository questionRepository;
+
+    @Autowired
+    public HomeController(QuestionRepository questionRepository) {
+        this.questionRepository = questionRepository;
+    }
 
     @GetMapping("/")
     public ModelAndView showDefaultHomepage() {

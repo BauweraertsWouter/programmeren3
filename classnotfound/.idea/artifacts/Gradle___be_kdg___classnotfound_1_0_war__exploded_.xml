@@ -53,6 +53,7 @@
           <element id="library" level="project" name="Gradle: javax.annotation:jsr250-api:1.0" />
           <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.1.2.RELEASE/89922ce4ce85f8acf708d587326f555afe205e0a/spring-security-web-4.1.2.RELEASE.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">
