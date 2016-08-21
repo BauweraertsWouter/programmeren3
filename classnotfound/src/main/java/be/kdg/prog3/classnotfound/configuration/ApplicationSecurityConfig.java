@@ -27,14 +27,13 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+                .formLogin()
+                .loginPage("/login")
+                .permitAll()
+                .and()
+                .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/q").authenticated()
                 .anyRequest().permitAll();
-
-        // TODO: https://spring.io/guides/gs/securing-web/
-                //.and()
-                //.formLogin()
-                //.loginPage("/login")
-                //.permitAll()
     }
 }
