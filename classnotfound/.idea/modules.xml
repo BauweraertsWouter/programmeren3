@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/classnotfound.iml" filepath="$PROJECT_DIR$/.idea/modules/classnotfound.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/classnotfound_main.iml" filepath="$PROJECT_DIR$/.idea/modules/classnotfound_main.iml" group="classnotfound" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/classnotfound_test.iml" filepath="$PROJECT_DIR$/.idea/modules/classnotfound_test.iml" group="classnotfound" />
     </modules>
   </component>
 </project>
