@@ -22,6 +22,7 @@
           <element id="library" level="project" name="Gradle: org.thymeleaf:thymeleaf-spring4:3.0.1.RELEASE" />
           <element id="library" level="project" name="Gradle: com.h2database:h2:1.4.192" />
           <element id="library" level="project" name="Gradle: org.hibernate:hibernate-core:5.2.2.Final" />
+          <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-web:4.1.2.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.security:spring-security-config:4.1.2.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.3.2.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.3.2.RELEASE" />
@@ -53,7 +54,7 @@
           <element id="library" level="project" name="Gradle: javax.annotation:jsr250-api:1.0" />
           <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/4.1.2.RELEASE/89922ce4ce85f8acf708d587326f555afe205e0a/spring-security-web-4.1.2.RELEASE.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.thymeleaf.extras/thymeleaf-extras-springsecurity4/3.0.0.RELEASE/d234dda5233620fc8816131d6bd99be0a7313154/thymeleaf-extras-springsecurity4-3.0.0.RELEASE.jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">
