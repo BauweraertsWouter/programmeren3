@@ -7,6 +7,8 @@
     <title>ClassNotFound - Home</title>
 </head>
 <body>
+    <nav th:replace="header :: header"></nav>
+
     <h1>Popular Questions Today</h1>
     <ul>
         <li th:each="question : ${questions}" th:text="${question.subject}"></li>
