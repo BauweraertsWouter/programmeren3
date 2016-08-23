@@ -5,8 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Nieuwe Vraag</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
+    <nav th:replace="header :: header"></nav>
+
     <form th:action="@{/q}" method="POST">
         <label for="subject">Onderwerp</label>
         <input id="subject" type="text" name="subject">

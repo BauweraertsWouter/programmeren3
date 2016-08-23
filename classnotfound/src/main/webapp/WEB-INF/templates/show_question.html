@@ -5,8 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Vraag Details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
+    <nav th:replace="header :: header"></nav>
+
     <h1 th:text="${question.subject}"></h1>
     <h3>Score: <span th:text="${question.score}"></span></h3>
     <p th:text="${question.body}"></p>
