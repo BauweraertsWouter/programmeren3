@@ -57,8 +57,8 @@ public class ApplicationMvcConfig extends WebMvcConfigurerAdapter implements App
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        if (!registry.hasMappingForPattern("/css/**")) {
-            registry.addResourceHandler("/css/**").addResourceLocations("classpath:/css/");
+        if (!registry.hasMappingForPattern("/client/**")) {
+            registry.addResourceHandler("/client/**").addResourceLocations("classpath:/client/");
         }
     }
 }

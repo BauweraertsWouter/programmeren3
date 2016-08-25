@@ -3,9 +3,8 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <thymeleaf th:replace="header :: meta_link" />
     <title>Vraag Details</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
     <nav th:replace="header :: header"></nav>

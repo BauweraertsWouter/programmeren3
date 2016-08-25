@@ -3,9 +3,8 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <thymeleaf th:replace="header :: meta_link" />
     <title>ClassNotFound - Home</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body>
     <nav th:replace="header :: header"></nav>
@@ -15,6 +14,6 @@
         <li th:each="question : ${questions}" th:text="${question.subject}"></li>
     </ul>
 
-    <a href="q/new">Stel zelf een vraag</a>
+    <a th:href="@{q/new}">Stel zelf een vraag</a>
 </body>
 </html>
