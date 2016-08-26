@@ -9,12 +9,12 @@
 <body>
     <nav th:replace="header :: header(page='home')"></nav>
 
-    <h1>Popular Questions Today</h1>
+    <h2>Popular Questions Today</h2>
     <ul>
         <li th:each="question : ${questions}" th:text="${question.subject}"></li>
     </ul>
 
-    <a th:href="@{/q/new}">Stel zelf een vraag</a>
+    <a th:href="@{/q/new}">Ask a question yourself.</a>
 
     <thymeleaf th:replace="header :: script" />
 </body>

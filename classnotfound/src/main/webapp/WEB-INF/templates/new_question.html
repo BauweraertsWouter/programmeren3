@@ -9,13 +9,29 @@
 <body>
     <nav th:replace="header :: header(page='new')"></nav>
 
-    <form th:action="@{/q}" method="POST">
-        <label for="subject">Onderwerp</label>
-        <input id="subject" type="text" name="subject">
-        <label for="body">Bericht</label>
-        <textarea id="body" name="body"></textarea>
-        <button type="submit">Verstuur</button>
-    </form>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span2"></div>
+            <div class="span8">
+
+                <h2>Ask your question</h2>
+
+                <form th:action="@{/q}" method="POST">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" name="subject" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="body">Details</label>
+                        <textarea id="body" name="body" class="form-control" rows="15"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+            </div>
+            <div class="span2"></div>
+        </div>
+    </div>
 
     <thymeleaf th:replace="header :: script" />
 </body>
