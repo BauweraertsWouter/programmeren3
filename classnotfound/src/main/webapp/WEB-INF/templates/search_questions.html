@@ -4,10 +4,13 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <thymeleaf th:replace="header :: meta_link" />
-    <title>Title</title>
+    <title>Search questions</title>
 </head>
 <body>
-    <nav th:replace="header :: header"></nav>
+    <nav th:replace="header :: header(page='search')"></nav>
 
+    <!-- TODO -->
+
+    <thymeleaf th:replace="header :: script" />
 </body>
 </html>

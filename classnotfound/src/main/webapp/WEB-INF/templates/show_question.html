@@ -13,5 +13,7 @@
     <h3>Score: <span th:text="${question.score}"></span></h3>
     <p th:text="${question.body}"></p>
     <h6><span th:text="${question.timestamp}"></span></h6>
+
+    <thymeleaf th:replace="header :: script" />
 </body>
 </html>

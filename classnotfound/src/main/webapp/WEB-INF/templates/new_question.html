@@ -7,7 +7,7 @@
     <title>Nieuwe Vraag</title>
 </head>
 <body>
-    <nav th:replace="header :: header"></nav>
+    <nav th:replace="header :: header(page='new')"></nav>
 
     <form th:action="@{/q}" method="POST">
         <label for="subject">Onderwerp</label>
@@ -16,5 +16,7 @@
         <textarea id="body" name="body"></textarea>
         <button type="submit">Verstuur</button>
     </form>
+
+    <thymeleaf th:replace="header :: script" />
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>ClassNotFound Login</title>
 </head>
 <body onload='document.f.username.focus();'>
-    <nav th:replace="header :: header"></nav>
+    <nav th:replace="header :: header(page='login')"></nav>
 
     <h3>Login with Username and Password</h3>
     <div th:if="${param.error}" style="color: red">
@@ -30,5 +30,7 @@
             </tr>
         </table>
     </form>
+
+    <thymeleaf th:replace="header :: script" />
 </body>
 </html>

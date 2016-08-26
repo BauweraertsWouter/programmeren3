@@ -40,6 +40,11 @@ public class QuestionController {
         return "new_question";
     }
 
+    @GetMapping("/q/search")
+    public String searchQuestions() {
+        return "search_questions";
+    }
+
     @PostMapping("/q")
     public ModelAndView addQuestion(@RequestParam String subject, @RequestParam String body) {
         Question question = new Question(subject, body);
