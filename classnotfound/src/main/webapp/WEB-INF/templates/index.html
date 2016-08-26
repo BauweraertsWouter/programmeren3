@@ -9,12 +9,20 @@
 <body>
     <nav th:replace="header :: header(page='home')"></nav>
 
+<<<<<<< HEAD
     <h2>Popular Questions Today</h2>
+=======
+    <h1>Popular Questions Today</h1>
+>>>>>>> c6e01a784b3abd160d91321780cc5b9daee48c65
     <ul>
         <li th:each="question : ${questions}" th:text="${question.subject}"></li>
     </ul>
 
+<<<<<<< HEAD
     <a th:href="@{/q/new}">Ask a question yourself.</a>
+=======
+    <a th:href="@{/q/new}">Stel zelf een vraag</a>
+>>>>>>> c6e01a784b3abd160d91321780cc5b9daee48c65
 
     <thymeleaf th:replace="header :: script" />
 </body>
