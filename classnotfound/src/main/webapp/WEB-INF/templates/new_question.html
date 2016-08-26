@@ -9,7 +9,6 @@
 <body>
     <nav th:replace="header :: header(page='new')"></nav>
 
-<<<<<<< HEAD
     <div class="container">
         <div class="row-fluid">
             <div class="span2"></div>
@@ -33,15 +32,6 @@
             <div class="span2"></div>
         </div>
     </div>
-=======
-    <form th:action="@{/q}" method="POST">
-        <label for="subject">Onderwerp</label>
-        <input id="subject" type="text" name="subject">
-        <label for="body">Bericht</label>
-        <textarea id="body" name="body"></textarea>
-        <button type="submit">Verstuur</button>
-    </form>
->>>>>>> c6e01a784b3abd160d91321780cc5b9daee48c65
 
     <thymeleaf th:replace="header :: script" />
 </body>
