@@ -1,0 +1,8 @@
+h6.timestamp {
+    text-align: right;
+}
+
+th.scoreColumn, td.scoreColumn {
+    width: 6em;
+    text-align: center;
+}
