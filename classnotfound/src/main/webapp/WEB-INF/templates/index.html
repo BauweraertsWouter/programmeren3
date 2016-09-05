@@ -17,9 +17,13 @@
 
                 <table class="table table-hover">
                     <tr><th class="scoreColumn">Score</th><th>Question</th></tr>
-                    <tr th:each="question : ${questions}">
-                        <td class="scoreColumn">- <span th:text="${question.score}"></span> +</td>
-                        <td th:text="${question.subject}"></td>
+                    <tr th:each="question : ${questions}" th:id="'question_' + ${question.id}">
+                        <td class="scoreColumn">
+                            <a href="#" class="down">&ddarr;</a>
+                            <span th:text="${question.score}"></span>
+                            <a href="#" class="up">&uuarr;</a>
+                        </td>
+                        <td th:text="${question.subject}" class="subject"></td>
                     </tr>
                 </table>
 
@@ -28,5 +32,6 @@
     </div>
 
     <thymeleaf th:replace="header :: script" />
+    <script th:src="@{/client/js/index.js}"></script>
 </body>
 </html>

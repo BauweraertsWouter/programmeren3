@@ -41,6 +41,10 @@ public class Question {
         this.timestamp = new Date();
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getSubject() {
         return subject;
     }
