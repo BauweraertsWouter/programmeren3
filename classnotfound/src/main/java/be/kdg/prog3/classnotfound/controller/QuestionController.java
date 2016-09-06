@@ -46,13 +46,10 @@ public class QuestionController {
     }
 
     @PostMapping("/q")
-    public ModelAndView addQuestion(@RequestParam String subject, @RequestParam String body) {
+    public String addQuestion(@RequestParam String subject, @RequestParam String body) {
         Question question = new Question(subject, body);
         question = questionRepository.save(question);
 
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("show_question");
-        modelAndView.getModel().put("question", question);
-        return modelAndView;
+        return "redirect:/q/" + question.getId();
     }
 }
