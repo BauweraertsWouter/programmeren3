@@ -23,7 +23,9 @@
                             <span th:text="${question.score}"></span>
                             <a href="#" class="up">&uuarr;</a>
                         </td>
-                        <td th:text="${question.subject}" class="subject"></td>
+                        <td>
+                            <a th:href="@{/q/{id}(id=${question.id})}" th:text="${question.subject}" class="subject"></a>
+                        </td>
                     </tr>
                 </table>
 
@@ -32,6 +34,5 @@
     </div>
 
     <thymeleaf th:replace="header :: script" />
-    <script th:src="@{/client/js/index.js}"></script>
 </body>
 </html>

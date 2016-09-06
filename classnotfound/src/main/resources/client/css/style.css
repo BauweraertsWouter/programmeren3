@@ -7,24 +7,24 @@ th.scoreColumn, td.scoreColumn {
     text-align: center;
 }
 
-td.subject {
+td > a {
     color: darkblue;
+    text-decoration: none;
     cursor: pointer;
 }
 
-td > a {
-    font-weight: bold;
-    cursor: pointer;
+td > a:hover {
     text-decoration: none;
-    color: darkblue;
+}
+
+td > a:not(.subject) {
+    font-weight: bold;
 }
 
 td > a.down:hover, td > a.down:active {
-    text-decoration: none;
     color: red;
 }
 
 td > a.up:hover, td > a.up:active {
-    text-decoration: none;
     color: green;
 }
