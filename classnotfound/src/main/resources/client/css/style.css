@@ -28,3 +28,8 @@ td > a.down:hover, td > a.down:active {
 td > a.up:hover, td > a.up:active {
     color: green;
 }
+
+/* Removing Bootstrap header row hover effect. */
+.table-hover tbody tr:hover th {
+    background-color: white;
+}
