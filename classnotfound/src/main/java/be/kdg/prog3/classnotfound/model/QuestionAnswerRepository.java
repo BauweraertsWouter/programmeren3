@@ -6,6 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Transactional
-public interface QuestionRepository extends CrudRepository<Question, Long> {
-    List<Question> findTop10ByOrderByTimestampDesc();
+public interface QuestionAnswerRepository extends CrudRepository<QuestionAnswer, Long> {
+    List<QuestionAnswer> findTop10ByOrderByTimestampDesc();
 }

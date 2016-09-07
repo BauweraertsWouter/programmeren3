@@ -5,38 +5,45 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
-@Table(name = "QUESTION")
-public class Question {
+@Table(name = "QUESTION_ANSWER")
+public class QuestionAnswer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "QUE_ID")
+    @Column(name = "QA_ID")
     private long id;
 
-    @Column(name = "QUE_SUBJECT", length=100, nullable = false)
+    @Column(name = "QA_SUBJECT", length=100, nullable = false)
     private String subject;
 
-    @Column(name = "QUE_BODY", length=1000, nullable = false)
+    @Column(name = "QA_BODY", length=1000, nullable = false)
     private String body;
 
-    @Column(name = "QUE_SCORE", nullable = false)
+    @Column(name = "QA_SCORE", nullable = false)
     private int score;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "QUE_TIMESTAMP", nullable = false)
+    @Column(name = "QA_TIMESTAMP", nullable = false)
     private Date timestamp;
 
-    protected Question() {
+    @ManyToOne
+    @JoinColumn(name = "QA_USE_ID", nullable = false, updatable = false)
+    private User user;
+
+    protected QuestionAnswer() {
     }
 
-    public Question(String subject, String body) {
+    public QuestionAnswer(String subject, String body, User user) {
         this.subject = subject;
         this.body = body;
+        this.user = user;
         this.score = 0;
         this.timestamp = new Date();
     }
@@ -59,5 +66,9 @@ public class Question {
 
     public Date getTimestamp() {
         return timestamp;
+    }
+
+    public User getUser() {
+        return user;
     }
 }

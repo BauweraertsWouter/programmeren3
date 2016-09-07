@@ -4,7 +4,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <thymeleaf th:replace="header :: meta_link" />
-    <title>Vraag Details</title>
+    <title>Question Details</title>
 </head>
 <body>
     <nav th:replace="header :: header"></nav>
@@ -20,7 +20,7 @@
                 <hr>
                 <p th:text="${question.body}"></p>
                 <hr>
-                <h6 class="timestamp"><span th:text="${question.timestamp}"></span></h6>
+                <h6 class="userTimestamp"><span th:text="${question.user.name}"></span> - <span th:text="${question.timestamp}"></span></h6>
 
             </div>
         </div>

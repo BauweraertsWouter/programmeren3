@@ -1,7 +1,7 @@
 package be.kdg.prog3.classnotfound.controller;
 
-import be.kdg.prog3.classnotfound.model.Question;
-import be.kdg.prog3.classnotfound.model.QuestionRepository;
+import be.kdg.prog3.classnotfound.model.QuestionAnswer;
+import be.kdg.prog3.classnotfound.model.QuestionAnswerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,16 +11,16 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    private QuestionRepository questionRepository;
+    private QuestionAnswerRepository questionAnswerRepository;
 
     @Autowired
-    public HomeController(QuestionRepository questionRepository) {
-        this.questionRepository = questionRepository;
+    public HomeController(QuestionAnswerRepository questionAnswerRepository) {
+        this.questionAnswerRepository = questionAnswerRepository;
     }
 
     @GetMapping("/")
     public ModelAndView showDefaultHomepage() {
-        final List<Question> homepageQuestions = questionRepository.findTop10ByOrderByTimestampDesc();
+        final List<QuestionAnswer> homepageQuestions = questionAnswerRepository.findTop10ByOrderByTimestampDesc();
 
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
