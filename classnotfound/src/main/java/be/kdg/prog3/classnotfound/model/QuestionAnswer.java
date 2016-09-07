@@ -37,6 +37,10 @@ public class QuestionAnswer {
     @JoinColumn(name = "QA_USE_ID", nullable = false, updatable = false)
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "QA_PARENT_QA_ID", updatable = false)
+    private QuestionAnswer parent;
+
     protected QuestionAnswer() {
     }
 
@@ -46,6 +50,7 @@ public class QuestionAnswer {
         this.user = user;
         this.score = 0;
         this.timestamp = new Date();
+        this.parent = null;
     }
 
     public long getId() {

@@ -12,8 +12,9 @@ CREATE OR REPLACE TABLE question_answer (
   qa_score INTEGER NOT NULL,
   qa_timestamp TIMESTAMP NOT NULL,
   qa_use_id BIGINT NOT NULL
-    CONSTRAINT fk_qa_use_id REFERENCES user(use_id)
-  /* TODO: add optional foreign key to parent question */
+    CONSTRAINT fk_qa_use_id REFERENCES user(use_id),
+  qa_parent_qa_id BIGINT DEFAULT NULL
+    CONSTRAINT fk_qa_parent_qa_id REFERENCES question_answer(qa_id)
 );
 
 CREATE OR REPLACE TABLE vote (

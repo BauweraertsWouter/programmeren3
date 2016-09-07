@@ -20,7 +20,7 @@ public class HomeController {
 
     @GetMapping("/")
     public ModelAndView showDefaultHomepage() {
-        final List<QuestionAnswer> homepageQuestions = questionAnswerRepository.findTop10ByOrderByTimestampDesc();
+        final List<QuestionAnswer> homepageQuestions = questionAnswerRepository.findTop10ByParentIsNullOrderByTimestampDesc();
 
         final ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");

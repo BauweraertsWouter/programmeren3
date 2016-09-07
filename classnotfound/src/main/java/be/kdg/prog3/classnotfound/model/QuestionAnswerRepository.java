@@ -7,5 +7,5 @@ import java.util.List;
 
 @Transactional
 public interface QuestionAnswerRepository extends CrudRepository<QuestionAnswer, Long> {
-    List<QuestionAnswer> findTop10ByOrderByTimestampDesc();
+    List<QuestionAnswer> findTop10ByParentIsNullOrderByTimestampDesc();
 }
