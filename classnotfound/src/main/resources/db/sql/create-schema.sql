@@ -7,14 +7,17 @@ CREATE OR REPLACE TABLE user (
 
 CREATE OR REPLACE TABLE question_answer (
   qa_id IDENTITY PRIMARY KEY,
-  qa_subject VARCHAR(100) NOT NULL,
+  qa_subject VARCHAR(100) DEFAULT NULL,
   qa_body VARCHAR(1000) NOT NULL,
   qa_score INTEGER NOT NULL,
   qa_timestamp TIMESTAMP NOT NULL,
   qa_use_id BIGINT NOT NULL
     CONSTRAINT fk_qa_use_id REFERENCES user(use_id),
   qa_parent_qa_id BIGINT DEFAULT NULL
-    CONSTRAINT fk_qa_parent_qa_id REFERENCES question_answer(qa_id)
+    CONSTRAINT fk_qa_parent_qa_id REFERENCES question_answer(qa_id),
+  CONSTRAINT ck_subject_or_parent CHECK (
+              (qa_subject IS NULL OR qa_parent_qa_id IS NULL)
+          AND (qa_subject IS NOT NULL OR qa_parent_qa_id IS NOT NULL))
 );
 
 CREATE OR REPLACE TABLE vote (

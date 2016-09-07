@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 public class QuestionAnswerController {
     private QuestionAnswerRepository questionAnswerRepository;
@@ -27,9 +29,11 @@ public class QuestionAnswerController {
     public ModelAndView showQuestion(@PathVariable long questionId) throws HttpServerErrorException {
         QuestionAnswer question = questionAnswerRepository.findOne(questionId);
         if (question != null) {
+            List<QuestionAnswer> answers = questionAnswerRepository.findAnswersByParentOrderByTimestampAsc(question);
             ModelAndView modelAndView = new ModelAndView();
             modelAndView.setViewName("show_question");
             modelAndView.getModel().put("question", question);
+            modelAndView.getModel().put("answers", answers);
             return modelAndView;
         }
         else {
@@ -54,5 +58,15 @@ public class QuestionAnswerController {
         questionAnswer = questionAnswerRepository.save(questionAnswer);
 
         return "redirect:/q/" + questionAnswer.getId();
+    }
+
+    @PostMapping("/a")
+    public String addAnswer(@RequestParam String body, @RequestParam long parentId,
+                              @AuthenticationPrincipal UserDetails userDetails) {
+        QuestionAnswer parent = questionAnswerRepository.findOne(parentId);
+        QuestionAnswer questionAnswer = new QuestionAnswer(body, userDetails.getUser(), parent);
+        questionAnswerRepository.save(questionAnswer);
+
+        return "redirect:/q/" + parent.getId();
     }
 }

@@ -36,7 +36,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .successHandler(successHandler())
                 .and()
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/q")
+                .antMatchers(HttpMethod.POST, "/q", "/a")
                 .authenticated()
                 .anyRequest().permitAll();
     }

@@ -20,7 +20,7 @@ public class QuestionAnswer {
     @Column(name = "QA_ID")
     private long id;
 
-    @Column(name = "QA_SUBJECT", length=100, nullable = false)
+    @Column(name = "QA_SUBJECT", length=100, updatable = false)
     private String subject;
 
     @Column(name = "QA_BODY", length=1000, nullable = false)
@@ -44,13 +44,21 @@ public class QuestionAnswer {
     protected QuestionAnswer() {
     }
 
+    public QuestionAnswer(String body, User user, QuestionAnswer parent) {
+        this(body, user);
+        this.parent = parent;
+    }
+
     public QuestionAnswer(String subject, String body, User user) {
+        this(body, user);
         this.subject = subject;
+    }
+
+    private QuestionAnswer(String body, User user) {
         this.body = body;
         this.user = user;
         this.score = 0;
         this.timestamp = new Date();
-        this.parent = null;
     }
 
     public long getId() {

@@ -54,3 +54,16 @@ INSERT INTO question_answer (qa_subject, qa_body, qa_score, qa_timestamp, qa_use
 INSERT INTO question_answer (qa_subject, qa_body, qa_score, qa_timestamp, qa_use_id)
   VALUES ('Mijn .war file werkt niet.... Help! :(', 'Graag zo snel mogelijk antwoord!', 30, '2016-08-30 10:45:00',
           SELECT use_id FROM user WHERE use_name = 'pedro');
+
+INSERT INTO question_answer (qa_body, qa_score, qa_timestamp, qa_use_id, qa_parent_qa_id)
+  VALUES ('Het antwoord is 5.', 5, '2016-08-30 21:45:00',
+          SELECT use_id FROM user WHERE use_name = 'marcel',
+          10);
+INSERT INTO question_answer (qa_body, qa_score, qa_timestamp, qa_use_id, qa_parent_qa_id)
+  VALUES ('Zie https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html', 3, '2016-08-30 21:59:00',
+          SELECT use_id FROM user WHERE use_name = 'jos',
+          10);
+INSERT INTO question_answer (qa_body, qa_score, qa_timestamp, qa_use_id, qa_parent_qa_id)
+  VALUES ('ok thx', 0, '2016-08-30 22:45:00',
+          SELECT use_id FROM user WHERE use_name = 'pedro',
+          10);
