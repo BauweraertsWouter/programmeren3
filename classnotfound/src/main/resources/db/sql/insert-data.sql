@@ -67,3 +67,12 @@ INSERT INTO question_answer (qa_body, qa_score, qa_timestamp, qa_use_id, qa_pare
   VALUES ('ok thx', 0, '2016-08-30 22:45:00',
           SELECT use_id FROM user WHERE use_name = 'pedro',
           10);
+
+INSERT INTO question_answer (qa_body, qa_score, qa_timestamp, qa_use_id, qa_parent_qa_id)
+  VALUES ('Euhm...', 2, '2016-08-30 18:59:00',
+        SELECT use_id FROM user WHERE use_name = 'rudy',
+        4);
+INSERT INTO question_answer (qa_body, qa_score, qa_timestamp, qa_use_id, qa_parent_qa_id)
+  VALUES ('Omdat de structuur en instellingen niet zo flexibel zijn en omdat het extensions-systeem nogal complex in elkaar zit. De tonnen XML die nodig zijn voor Maven kunnen we ook missen.', 1, '2016-08-30 19:45:00',
+        SELECT use_id FROM user WHERE use_name = 'pedro',
+        4);
