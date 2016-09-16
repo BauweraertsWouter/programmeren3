@@ -12,6 +12,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig voorbeeld van een servlet context listener.
 
+- [filters](filters)
+
+  Een eenvoudig voorbeeld van filters.
+
 - [boot_servlet](boot_servlet)
 
   De meest eenvoudige servlets geimplementeerd met Spring Boot.
