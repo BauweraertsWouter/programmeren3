@@ -4,6 +4,10 @@ In deze repository vind je voorbeeldcode voor het vak Programmeren 3. Elke direc
 
 Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
+- [basicservlet](basicservlet)
+
+  Een eenvoudig servlet in een Gradle project met embedded Tomcat.
+
 - [thread_safety](thread_safety)
 
   Enkele kleine servlets die de problematiek rond thread safety illustreren.
