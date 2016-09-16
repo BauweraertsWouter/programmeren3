@@ -8,6 +8,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
+- [listeners](listeners)
+
+  Een eenvoudig voorbeeld van een servlet context listener.
+
 - [boot_servlet](boot_servlet)
 
   De meest eenvoudige servlets geimplementeerd met Spring Boot.
