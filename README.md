@@ -4,13 +4,11 @@ In deze repository vind je voorbeeldcode voor het vak Programmeren 3. Elke direc
 
 Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
+## Week 1
+
 - [basicservlet](basicservlet)
 
   Een eenvoudig servlet in een Gradle project met embedded Tomcat.
-
-- [thread_safety](thread_safety)
-
-  Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
 - [listeners](listeners)
 
@@ -24,9 +22,11 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig RequestDispatcher voorbeeld.
 
-- [boot_servlet](boot_servlet)
+- [thread_safety](thread_safety)
 
-  De meest eenvoudige servlets geimplementeerd met Spring Boot.
+  Enkele kleine servlets die de problematiek rond thread safety illustreren.
+
+## Week 3+
 
 - [spring_mvc_account](spring_mvc_account)
 
@@ -39,3 +39,9 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 - [classnotfound](classnotfound)
 
   Een eenvoudige website waar je vragen kan stellen, beantwoorden en up/downvoten (a la StackOverflow of reddit). Gebruikt Spring MVC met Thymeleaf en Hibernate.
+
+## Extra
+
+- [boot_servlet](boot_servlet)
+
+  De meest eenvoudige servlets geimplementeerd met Spring Boot.
