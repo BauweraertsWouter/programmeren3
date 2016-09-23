@@ -20,6 +20,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig voorbeeld van filters.
 
+- [dispatch](dispatch)
+
+  Een eenvoudig RequestDispatcher voorbeeld.
+
 - [boot_servlet](boot_servlet)
 
   De meest eenvoudige servlets geimplementeerd met Spring Boot.
