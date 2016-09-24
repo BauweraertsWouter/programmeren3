@@ -26,6 +26,12 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
+## Week 2
+
+- [session](session)
+
+  Een voorbeeld van het aanmaken en raadplegen van een sessie.
+
 ## Week 3+
 
 - [spring_mvc_account](spring_mvc_account)
