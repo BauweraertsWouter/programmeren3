@@ -32,6 +32,14 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een voorbeeld van het aanmaken en raadplegen van een sessie.
 
+- [blog_jsp](blog_jsp)
+
+  Het [dispatch](dispatch) voorbeeld omgezet naar JSP anno 1999-2000.
+
+- [blog_jstl](blog_jstl)
+
+  Het [dispatch](dispatch) voorbeeld omgezet naar een eenvoudige JSP/JSTL pagina.
+
 ## Week 3+
 
 - [spring_mvc_account](spring_mvc_account)
