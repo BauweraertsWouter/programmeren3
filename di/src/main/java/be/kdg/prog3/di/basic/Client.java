@@ -1,4 +1,4 @@
-package be.kdg.prog3.di;
+package be.kdg.prog3.di.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

@@ -1,4 +1,4 @@
-package be.kdg.prog3.di;
+package be.kdg.prog3.di.basic;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
