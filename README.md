@@ -40,7 +40,13 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Het [dispatch](dispatch) voorbeeld omgezet naar een eenvoudige JSP/JSTL pagina.
 
-## Week 3+
+## Week 3
+
+- [di](di)
+
+  Dependency Injection voorbeelden geimplementeerd met Spring (geen Web).
+
+## Week 4+
 
 - [spring_mvc_account](spring_mvc_account)
 
