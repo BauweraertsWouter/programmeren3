@@ -46,8 +46,6 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Dependency Injection voorbeelden geimplementeerd met Spring (geen Web).
 
-## Week 4+
-
 - [spring_mvc_account](spring_mvc_account)
 
   Een heel eenvoudig Spring MVC voorbeeld waarvan de view kant is gebouwd met JSP.
@@ -55,6 +53,8 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 - [smvc_thymeleaf_account](smvc_thymeleaf_account)
 
   Spring MVC met Thymeleaf.
+
+## Week 4+
 
 - [classnotfound](classnotfound)
 
