@@ -54,7 +54,13 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Spring MVC met Thymeleaf.
 
-## Week 4+
+## Week 4
+
+- [controllers](controllers)
+
+  Drie Spring MVC controllers worden gebruikt om de parameters en return types van controller-methods te illustreren.
+
+## Geintegreerd project
 
 - [classnotfound](classnotfound)
 
