@@ -26,6 +26,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
+- **Extra:** [boot_servlet](boot_servlet)
+
+  De meest eenvoudige servlets geimplementeerd met Spring Boot.
+
 ## Week 2
 
 - [session](session)
@@ -50,7 +54,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een heel eenvoudig Spring MVC voorbeeld waarvan de view kant is gebouwd met JSP.
 
-- [smvc_thymeleaf_account](smvc_thymeleaf_account)
+- **Extra:** [smvc_thymeleaf_account](smvc_thymeleaf_account)
 
   Spring MVC met Thymeleaf.
 
@@ -65,9 +69,3 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 - [classnotfound](classnotfound)
 
   Een eenvoudige website waar je vragen kan stellen, beantwoorden en up/downvoten (a la StackOverflow of reddit). Gebruikt Spring MVC met Thymeleaf en Hibernate.
-
-## Extra
-
-- [boot_servlet](boot_servlet)
-
-  De meest eenvoudige servlets geimplementeerd met Spring Boot.
