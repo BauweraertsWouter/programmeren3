@@ -1,0 +1,20 @@
+group 'be.kdg'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+// Gretty:
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(group: 'org.springframework', name: 'spring-webmvc', version: '4.3.3.RELEASE')
+    compile(group: 'javax.servlet', name: 'jstl', version: '1.2')
+    compile(group: 'javax', name: 'javaee-api', version: '7.0')
+}
