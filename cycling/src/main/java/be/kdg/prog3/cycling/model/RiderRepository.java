@@ -4,6 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-public interface TeamRepository extends CrudRepository<Team, Long> {
-    Team findByUciCode(String uciCode);
+public interface RiderRepository extends CrudRepository<Rider, Long> {
 }

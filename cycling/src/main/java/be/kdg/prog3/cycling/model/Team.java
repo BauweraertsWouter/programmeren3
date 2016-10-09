@@ -1,11 +1,15 @@
 package be.kdg.prog3.cycling.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name = "TEAM")
@@ -24,6 +28,9 @@ public class Team {
     @Column(name = "YEAR_FOUNDED", nullable = false)
     private short founded;
 
+    @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Rider> riders;
+
     protected Team() {
     }
 
@@ -37,5 +44,9 @@ public class Team {
 
     public short getFounded() {
         return founded;
+    }
+
+    public List<Rider> getRiders() {
+        return riders;
     }
 }
