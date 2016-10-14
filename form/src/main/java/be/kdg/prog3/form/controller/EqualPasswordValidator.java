@@ -17,8 +17,8 @@ public class EqualPasswordValidator implements Validator {
         UserDataForm userData = (UserDataForm) target;
 
         if(!userData.getPassword().equals(userData.getPasswordConfirmation())) {
-            errors.rejectValue("password", "password.not.equal");
-            errors.rejectValue("passwordConfirmation", "password.confirmation.not.equal");
+            errors.rejectValue("password", "form.invalid.password.not.equal");
+            errors.rejectValue("passwordConfirmation", "form.invalid.password.confirmation.not.equal");
         }
     }
 }

@@ -6,20 +6,20 @@ import org.hibernate.validator.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 public class UserDataForm {
-    @Size(min = 2, max = 50)
+    @Size(min = 2, max = 50, message = "{form.invalid.size}")
     private String firstName;
 
-    @Size(min = 2, max = 50)
+    @Size(min = 2, max = 50, message = "{form.invalid.size}")
     private String lastName;
 
-    @Email
-    @NotBlank
+    @Email(message = "{form.invalid.email}")
+    @NotBlank(message = "{form.invalid.empty}")
     private String email;
 
-    @Size(min = 8, max = 20)
+    @Size(min = 8, max = 20, message = "{form.invalid.size}")
     private String password;
 
-    @Size(min = 8, max = 20)
+    @Size(min = 8, max = 20, message = "{form.invalid.size}")
     private String passwordConfirmation;
 
     public UserDataForm() {
