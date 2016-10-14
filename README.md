@@ -68,6 +68,12 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een spring MVC applicatie met achterliggend twee tabellen in een H2 databank.
 
+## Week 5
+
+- [form](form)
+
+  Spring form met validatie. i18n wordt toegepast op het formulier (JSP/JSTL) en de validatie-berichten.
+
 ## Geintegreerd project
 
 - [classnotfound](classnotfound)
