@@ -56,4 +56,8 @@ public class Rider {
     public Team getTeam() {
         return team;
     }
+
+    public List<StageResult> getStageResults() {
+        return stageResults;
+    }
 }

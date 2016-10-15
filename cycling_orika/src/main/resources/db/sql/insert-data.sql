@@ -55,7 +55,7 @@ INSERT INTO stage VALUES(40, 19, 2);
 INSERT INTO stage VALUES(41, 20, 2);
 INSERT INTO stage VALUES(42, 21, 2);
 
-// Only the victories are inserted for now...
+/* Only the victories are inserted for now... */
 INSERT INTO stage_result VALUES(1, 1, 25, 4);
 INSERT INTO stage_result VALUES(2, 1, 4, 5);
 INSERT INTO stage_result VALUES(3, 1, 6, 6);

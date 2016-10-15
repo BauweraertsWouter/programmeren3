@@ -102,5 +102,9 @@
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:8.5.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:8.5.5" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jdt.core.compiler:ecj:4.5.1" level="project" />
+    <orderEntry type="library" name="Gradle: ma.glasnost.orika:orika-core:1.4.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.thoughtworks.paranamer:paranamer:2.7" level="project" />
+    <orderEntry type="library" name="Gradle: com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:1.2_jdk5" level="project" />
+    <orderEntry type="library" name="Gradle: com.carrotsearch:java-sizeof:0.0.4" level="project" />
   </component>
 </module>

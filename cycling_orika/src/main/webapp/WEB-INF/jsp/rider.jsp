@@ -7,6 +7,7 @@
     <body>
         <h1>${rider.name}</h1>
         <h2>Date of birth: ${rider.dateOfBirth}</h2>
-        <h2>Team: <a href="<c:url value="/team/${rider.team.uciCode}" />">${rider.team.name}</a></h2>
+        <h2>Team: <a href="<c:url value="/team/${rider.teamUciCode}" />">${rider.teamName}</a></h2>
+        <h2>Stage wins: ${rider.stageWins}</h2>
     </body>
 </html>
