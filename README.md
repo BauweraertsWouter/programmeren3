@@ -74,6 +74,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Spring form met validatie. i18n wordt toegepast op het formulier (JSP/JSTL) en de validatie-berichten.
 
+- [cycling_orika](cycling_orika)
+
+  De cycling applicatie van week 4, uitgebreid met Orika bean mapping (en enkele extra tabellen). Eveneens omgezet naar Spring Boot.
+
 ## Geintegreerd project
 
 - [classnotfound](classnotfound)
