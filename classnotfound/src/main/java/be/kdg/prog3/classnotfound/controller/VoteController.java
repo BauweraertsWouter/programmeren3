@@ -36,16 +36,4 @@ public class VoteController {
         final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
         this.voteRepository.save(vote);
     }
-
-    @DeleteMapping("/vote/{qaId}")
-    public void deleteVote(@PathVariable long qaId, @AuthenticationPrincipal UserDetails userDetails) {
-        final Vote vote = this.voteRepository.findByQuestionAnswerIdAndUserId(qaId, userDetails.getUser().getId());
-        if (vote != null) {
-            this.voteRepository.delete(vote.getId());
-        }
-        else {
-            // TODO: actually, checking should be a bit more specific...
-            throw new UnauthorizedException("Can't delete vote.");
-        }
-    }
 }
