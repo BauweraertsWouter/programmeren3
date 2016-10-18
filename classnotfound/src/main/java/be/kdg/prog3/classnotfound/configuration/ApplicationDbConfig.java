@@ -26,6 +26,7 @@ public class ApplicationDbConfig {
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
         return builder.setType(EmbeddedDatabaseType.H2)
+                .addScript("db/sql/drop-schema.sql")
                 .addScript("db/sql/create-schema.sql")
                 .addScript("db/sql/insert-data.sql")
                 .build();

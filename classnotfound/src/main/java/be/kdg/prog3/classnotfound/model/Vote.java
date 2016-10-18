@@ -38,7 +38,15 @@ public class Vote {
         this.isUp = isUp;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public boolean isUp() {
         return isUp;
+    }
+
+    public User getUser() {
+        return user;
     }
 }

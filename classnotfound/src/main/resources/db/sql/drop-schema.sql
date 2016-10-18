@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS vote;
+DROP TABLE IF EXISTS question_answer;
+DROP TABLE IF EXISTS user;

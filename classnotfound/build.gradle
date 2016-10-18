@@ -5,6 +5,12 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'idea'
 
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+gretty {
+    port = 8090
+}
+
 sourceCompatibility = 1.8
 
 repositories {
@@ -42,5 +48,5 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.0'
+    gradleVersion = '3.1'
 }
