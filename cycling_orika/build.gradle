@@ -36,7 +36,6 @@ jar {
 buildscript {
     // Version numbers are defined here because the buildscript block gets executed first.
     ext.springBootVersion = '1.4.1.RELEASE'
-    ext.junitVersion = '4.12'
     ext.jasperVersion = '8.5.5'
 
     repositories {
