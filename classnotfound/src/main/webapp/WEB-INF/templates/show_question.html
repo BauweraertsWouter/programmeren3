@@ -17,10 +17,10 @@
             <div class="col-md-11">
 
                 <h2 th:text="${question.subject}"></h2>
-                <hr>
+                <hr />
                 <p th:text="${question.body}"></p>
                 <h6 class="userTimestamp"><span th:text="${question.user.name}"></span> - <span th:text="${#dates.format(question.timestamp,'dd-MM-yyyy HH:mm')}"></span></h6>
-                <hr>
+                <hr />
 
             </div>
         </div>
@@ -33,7 +33,7 @@
 
                 <p th:text="${answer.body}"></p>
                 <h6 class="userTimestamp"><span th:text="${answer.user.name}"></span> - <span th:text="${#dates.format(answer.timestamp,'dd-MM-yyyy HH:mm')}"></span></h6>
-                <hr>
+                <hr />
 
             </div>
         </div>

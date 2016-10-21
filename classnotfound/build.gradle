@@ -2,14 +2,8 @@ group 'be.kdg'
 version '1.0'
 
 apply plugin: 'java'
-apply plugin: 'war'
 apply plugin: 'idea'
-
-apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
-
-gretty {
-    port = 8090
-}
+apply plugin: 'spring-boot'
 
 sourceCompatibility = 1.8
 
@@ -18,33 +12,45 @@ repositories {
 }
 
 dependencies {
-    // Contains ServletException and friends:
-    compile(group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0')
+    compile(group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: jasperVersion)
 
-    // Contains @Entity and friends:
-    compile(group: 'javax.persistence', name: 'persistence-api', version: '1.0.2')
-
-    // Contains spring-core and spring-web among others:
-    compile(group: 'org.springframework', name: 'spring-webmvc', version: '4.3.2.RELEASE')
-
-    // Contains @Transactional and friends:
-    compile(group: 'org.springframework', name: 'spring-tx', version: '4.3.2.RELEASE')
-    // Contains CrudRepository and friends:
-    compile(group: 'org.springframework.data', name: 'spring-data-commons', version: '1.12.2.RELEASE')
-    // Contains HibernateTransactionManager, LocalSessionFactoryBean and friends:
-    compile(group: 'org.springframework', name: 'spring-orm', version: '4.3.2.RELEASE')
-    // Contains @EnableJpaRepositories and friends (also references some OLD versions of the dependencies above, so those dependencies should remain in place!):
-    compile(group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.10.2.RELEASE')
-
-    compile(group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.1.RELEASE')
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootVersion) {
+        exclude(module: 'spring-boot-starter-tomcat')
+    }
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version: springBootVersion)
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: springBootVersion)
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springBootVersion)
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: springBootVersion)
     compile(group: 'com.h2database', name: 'h2', version: '1.4.192')
-    compile(group: 'org.hibernate', name: 'hibernate-core', version: '5.2.2.Final')
 
-    compile(group: 'org.springframework.security', name: 'spring-security-web', version: '4.1.2.RELEASE')
-    compile(group: 'org.springframework.security', name: 'spring-security-config', version: '4.1.2.RELEASE')
-    compile(group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '3.0.0.RELEASE')
+    // Thymeleaf 3: (Spring Boot configuration doesn't work yet)
+    // Need to add this dependency explicitly (version conflict)
+    //compile(group: "org.thymeleaf", name: "thymeleaf", version: "3.0.2.RELEASE")
+    //compile(group: 'org.thymeleaf', name: 'thymeleaf-spring4', version: '3.0.2.RELEASE')
+    //compile(group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '3.0.0.RELEASE')
 
-    //testCompile(group: 'junit', name: 'junit', version: '4.11')
+    // Thymeleaf 2:
+    compile(group: 'org.thymeleaf.extras', name: 'thymeleaf-extras-springsecurity4', version: '2.1.2.RELEASE')
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: springBootVersion)
+}
+
+jar {
+    baseName = rootProject.name
+    version =  version
+}
+
+buildscript {
+    ext {
+        springBootVersion = '1.4.1.RELEASE'
+        jasperVersion = '8.5.5'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath(group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: springBootVersion)
+    }
 }
 
 task wrapper(type: Wrapper) {
