@@ -26,7 +26,7 @@ public class QuestionAnswerController {
     }
 
     @GetMapping("/q/{questionId}")
-    public ModelAndView showQuestion(@PathVariable long questionId) throws HttpServerErrorException {
+    public ModelAndView showQuestion(@PathVariable long questionId) {
         QuestionAnswer question = questionAnswerRepository.findOne(questionId);
         if (question != null) {
             List<QuestionAnswer> answers = questionAnswerRepository.findAnswersByParentOrderByTimestampAsc(question);
@@ -37,7 +37,11 @@ public class QuestionAnswerController {
             return modelAndView;
         }
         else {
+            // This would be a good way to handle this:
             throw new HttpServerErrorException(HttpStatus.NOT_FOUND, "QuestionAnswer with ID '" + questionId + "' not found.");
+
+            // Alternatively, let this exception be picked up by AppWideExceptionHandler:
+            //throw new QuestionNotFoundException("QuestionAnswer with ID '" + questionId + "' not found.");
         }
     }
 
