@@ -1,6 +1,5 @@
 package be.kdg.prog3.classnotfound.controller;
 
-import be.kdg.prog3.classnotfound.controller.exception.UnauthorizedException;
 import be.kdg.prog3.classnotfound.model.QuestionAnswer;
 import be.kdg.prog3.classnotfound.model.QuestionAnswerRepository;
 import be.kdg.prog3.classnotfound.model.Vote;
@@ -26,14 +25,16 @@ public class VoteController {
 
     @PostMapping("/vote/{qaId}/{upOrDown}")
     public void castVote(@PathVariable long qaId, @PathVariable String upOrDown, @AuthenticationPrincipal UserDetails userDetails) {
-        // Delete first, if exists
+        final QuestionAnswer qa = this.questionAnswerRepository.findOne(qaId);
+        final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
+        this.voteRepository.save(vote);
+    }
+
+    @DeleteMapping("/vote/{qaId}")
+    public void deleteVote(@PathVariable long qaId, @AuthenticationPrincipal UserDetails userDetails) {
         final Vote existingVote = this.voteRepository.findByQuestionAnswerIdAndUserId(qaId, userDetails.getUser().getId());
         if (existingVote != null) {
             this.voteRepository.delete(existingVote.getId());
         }
-
-        final QuestionAnswer qa = this.questionAnswerRepository.findOne(qaId);
-        final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
-        this.voteRepository.save(vote);
     }
 }
