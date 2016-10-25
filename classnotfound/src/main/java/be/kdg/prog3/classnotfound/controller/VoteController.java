@@ -26,15 +26,36 @@ public class VoteController {
     @PostMapping("/vote/{qaId}/{upOrDown}")
     public void castVote(@PathVariable long qaId, @PathVariable String upOrDown, @AuthenticationPrincipal UserDetails userDetails) {
         final QuestionAnswer qa = this.questionAnswerRepository.findOne(qaId);
-        final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
-        this.voteRepository.save(vote);
+        if (qa != null) {
+            final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
+            this.voteRepository.save(vote);
+
+            qa.setScore(qa.getScore() + (vote.isUp() ? -1 : 1));
+            this.questionAnswerRepository.save(qa);
+        }
+        else {
+            // TODO: exception handling
+        }
     }
 
     @DeleteMapping("/vote/{qaId}")
     public void deleteVote(@PathVariable long qaId, @AuthenticationPrincipal UserDetails userDetails) {
+        final QuestionAnswer qa = this.questionAnswerRepository.findOne(qaId);
         final Vote existingVote = this.voteRepository.findByQuestionAnswerIdAndUserId(qaId, userDetails.getUser().getId());
+
         if (existingVote != null) {
             this.voteRepository.delete(existingVote.getId());
+
+            if (qa != null) {
+                qa.setScore(qa.getScore() + (existingVote.isUp() ? -1 : 1));
+                this.questionAnswerRepository.save(qa);
+            }
+            else {
+                // TODO: exception handling
+            }
+        }
+        else {
+            // TODO: exception handling
         }
     }
 }

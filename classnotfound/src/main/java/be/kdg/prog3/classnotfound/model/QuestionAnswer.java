@@ -84,4 +84,8 @@ public class QuestionAnswer {
     public User getUser() {
         return user;
     }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }

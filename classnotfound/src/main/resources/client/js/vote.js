@@ -5,6 +5,15 @@ $(
                 var currentElement = $(this);
                 var header = $("meta[name='_csrf_header']").attr("content");
                 var token = $("meta[name='_csrf']").attr("content");
+                var scoreSpanElement = $(this).siblings("span")[0];
+
+                var vote;
+                if ($.inArray("up", currentElement.attr("class").split(/\s+/)) !== -1) {
+                    vote = "up";
+                }
+                else { // down
+                    vote = "down";
+                }
 
                 var questionId = currentElement.parent().parent().prop("id"); // question_1234
                 var id = questionId.substring(questionId.indexOf("_") + 1); // 1234
@@ -18,6 +27,12 @@ $(
                         },
                         success: function (data) {
                             currentElement.removeClass("selectedUp selectedDown");
+                            if (vote === "up") {
+                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) - 1);
+                            }
+                            else {
+                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) + 1);
+                            }
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             console.log("Delete vote failed!");
@@ -26,14 +41,6 @@ $(
                     });
                 }
                 else {
-                    var vote;
-                    if ($.inArray("up", currentElement.attr("class").split(/\s+/)) !== -1) {
-                        vote = "up";
-                    }
-                    else { // down
-                        vote = "down";
-                    }
-
                     $.ajax({
                         url: "vote/" + id + "/" + vote,
                         type: "POST",
@@ -42,6 +49,12 @@ $(
                         },
                         success: function (data) {
                             currentElement.addClass("selected" + vote.substring(0, 1).toUpperCase() + vote.substring(1));
+                            if (vote === "up") {
+                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) + 1);
+                            }
+                            else {
+                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) - 1);
+                            }
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             console.log("Voting failed!");
