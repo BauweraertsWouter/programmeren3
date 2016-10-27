@@ -3,11 +3,11 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <thymeleaf th:replace="header :: meta_link" />
+    <thymeleaf th:replace="includes :: meta_link" />
     <title>Question Details</title>
 </head>
 <body>
-    <nav th:replace="header :: header"></nav>
+    <nav th:replace="includes :: header"></nav>
 
     <div class="container">
         <div class="row-fluid">
@@ -55,6 +55,7 @@
         </div>
     </div>
 
-    <thymeleaf th:replace="header :: script" />
+    <thymeleaf th:replace="includes :: script" />
+    <script th:src="@{/client/js/vote.js}"></script>
 </body>
 </html>
