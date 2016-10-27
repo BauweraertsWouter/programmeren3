@@ -38,7 +38,10 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/q", "/a")
                 .authenticated()
-                .anyRequest().permitAll();
+                .anyRequest().permitAll()
+                .and()
+                .csrf()
+                .ignoringAntMatchers("/h2-console/**");
     }
 
     @Bean
