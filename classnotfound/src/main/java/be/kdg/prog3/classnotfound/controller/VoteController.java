@@ -30,7 +30,7 @@ public class VoteController {
             final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
             this.voteRepository.save(vote);
 
-            qa.setScore(qa.getScore() + (vote.isUp() ? -1 : 1));
+            qa.setScore(qa.getScore() + (vote.isUp() ? 1 : -1));
             this.questionAnswerRepository.save(qa);
         }
         else {
