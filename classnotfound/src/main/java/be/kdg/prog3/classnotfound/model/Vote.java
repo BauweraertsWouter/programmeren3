@@ -49,4 +49,8 @@ public class Vote {
     public User getUser() {
         return user;
     }
+
+    public void setUp(boolean up) {
+        isUp = up;
+    }
 }

@@ -41,6 +41,7 @@ $(
                     });
                 }
                 else {
+                    var selectedSiblings = $(this).siblings(".selectedUp, .selectedDown");
                     $.ajax({
                         url: "vote/" + id + "/" + vote,
                         type: "POST",
@@ -49,11 +50,24 @@ $(
                         },
                         success: function (data) {
                             currentElement.addClass("selected" + vote.substring(0, 1).toUpperCase() + vote.substring(1));
-                            if (vote === "up") {
-                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) + 1);
+                            var amountOfVotesToAddOrRemove;
+                            if (selectedSiblings.length === 1) {
+                                amountOfVotesToAddOrRemove = 2;
                             }
                             else {
-                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) - 1);
+                                amountOfVotesToAddOrRemove = 1;
+                            }
+
+                            if (vote === "up") {
+                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) + amountOfVotesToAddOrRemove);
+                            }
+                            else {
+                                $(scoreSpanElement).text(parseInt($(scoreSpanElement).text()) - amountOfVotesToAddOrRemove);
+                            }
+
+                            // Remove the selectedXXX class from any siblings that may have it.
+                            if (selectedSiblings.length === 1) {
+                                $(selectedSiblings[0]).removeClass("selectedUp selectedDown");
                             }
                         },
                         error: function (xhr, ajaxOptions, thrownError) {

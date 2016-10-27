@@ -27,10 +27,23 @@ public class VoteController {
     public void castVote(@PathVariable long qaId, @PathVariable String upOrDown, @AuthenticationPrincipal UserDetails userDetails) {
         final QuestionAnswer qa = this.questionAnswerRepository.findOne(qaId);
         if (qa != null) {
-            final Vote vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
+            Vote vote = this.voteRepository.findByQuestionAnswerIdAndUserId(qaId, userDetails.getUser().getId());
+            final int modifier;
+            if (vote == null) {
+                vote = new Vote(userDetails.getUser(), qa, upOrDown.equals("up"));
+                modifier = 1;
+            }
+            else {
+                if (vote.isUp() == upOrDown.equals("up")) {
+                    // TODO: throw exception "this exact vote already exists"
+                }
+                vote.setUp(upOrDown.equals("up"));
+                modifier = 2;
+            }
+
             this.voteRepository.save(vote);
 
-            qa.setScore(qa.getScore() + (vote.isUp() ? 1 : -1));
+            qa.setScore(qa.getScore() + (vote.isUp() ? 1 : -1) * modifier);
             this.questionAnswerRepository.save(qa);
         }
         else {
