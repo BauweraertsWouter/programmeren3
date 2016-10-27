@@ -1,0 +1,5 @@
+$(
+    function focusLoginField() {
+        $("#username").focus();
+    }
+);

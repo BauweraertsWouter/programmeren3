@@ -35,8 +35,9 @@ $(
                             }
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
-                            console.log("Delete vote failed!");
-                            // TODO: redirect to login page if error vode 500 or 403 (invalid CSRF)
+                            if (xhr.status == 403 || xhr.status == 500) {
+                                window.location.href = "/login";
+                            }
                         }
                     });
                 }
@@ -71,8 +72,9 @@ $(
                             }
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
-                            console.log("Voting failed!");
-                            // TODO: redirect to login page if error vode 500 or 403 (invalid CSRF)
+                            if (xhr.status == 403 || xhr.status == 500) {
+                                window.location.href = "/login";
+                            }
                         }
                     });
                 }
