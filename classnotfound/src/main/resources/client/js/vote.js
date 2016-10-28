@@ -1,7 +1,9 @@
 $(
     function addEventHandlers() {
         $("a.up, a.down").click(
-            function handleClick() {
+            function handleClick(event) {
+                event.preventDefault();
+
                 var currentElement = $(this);
                 var header = $("meta[name='_csrf_header']").attr("content");
                 var token = $("meta[name='_csrf']").attr("content");
