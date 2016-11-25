@@ -11,10 +11,14 @@
 
     <div class="container">
         <div class="row-fluid">
-            <div class="col-md-1">
-                <h3><span th:text="${question.score}"></span></h3>
+            <div class="col-md-2" th:id="'question_' + ${question.id}">
+                <h3>
+                    <a href="" class="down">&ddarr;</a>
+                    <span th:text="${question.score}"></span>
+                    <a href="" class="up">&uuarr;</a>
+                </h3>
             </div>
-            <div class="col-md-11">
+            <div class="col-md-10">
 
                 <h2 th:text="${question.subject}"></h2>
                 <hr />
@@ -26,10 +30,14 @@
         </div>
 
         <div th:each="answer : ${answers}" class="row-fluid">
-            <div class="col-md-1">
-                <h4><span th:text="${answer.score}"></span></h4>
+            <div class="col-md-2" th:id="'answer_' + ${answer.id}">
+                <h4>
+                    <a href="" class="down">&ddarr;</a>
+                    <span th:text="${answer.score}"></span>
+                    <a href="" class="up">&uuarr;</a>
+                </h4>
             </div>
-            <div class="col-md-11">
+            <div class="col-md-10">
 
                 <p th:text="${answer.body}"></p>
                 <h6 class="userTimestamp"><span th:text="${answer.user.name}"></span> - <span th:text="${#dates.format(answer.timestamp,'dd-MM-yyyy HH:mm')}"></span></h6>
@@ -39,8 +47,8 @@
         </div>
 
         <div class="row-fluid">
-            <div class="col-md-1"></div>
-            <div class="col-md-11">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
 
                 <h2>My answer</h2>
                 <form th:action="@{/a}" method="POST">

@@ -21,11 +21,11 @@ td > a:not(.subject) {
     font-weight: bold;
 }
 
-td > a.down:hover, td > a.down:active, td > a.selectedDown {
+a.down:hover, a.down:active, a.selectedDown {
     color: red;
 }
 
-td > a.up:hover, td > a.up:active, td > a.selectedUp {
+a.up:hover, a.up:active, a.selectedUp {
     color: green;
 }
 

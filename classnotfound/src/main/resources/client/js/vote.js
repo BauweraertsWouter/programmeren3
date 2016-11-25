@@ -7,7 +7,7 @@ $(
                 var currentElement = $(this);
                 var header = $("meta[name='_csrf_header']").attr("content");
                 var token = $("meta[name='_csrf']").attr("content");
-                var scoreSpanElement = $(this).siblings("span")[0];
+                var scoreSpanElement = currentElement.siblings("span")[0];
 
                 var vote;
                 if ($.inArray("up", currentElement.attr("class").split(/\s+/)) !== -1) {
@@ -17,12 +17,12 @@ $(
                     vote = "down";
                 }
 
-                var questionId = currentElement.parent().parent().prop("id"); // question_1234
+                var questionId = currentElement.parent().parent().prop("id"); // question_1234 or answer_1234
                 var id = questionId.substring(questionId.indexOf("_") + 1); // 1234
                 if ($.inArray("selectedUp", currentElement.attr("class").split(/\s+/)) !== -1
                             || $.inArray("selectedDown", currentElement.attr("class").split(/\s+/)) !== -1) {
                     $.ajax({
-                        url: "vote/" + id,
+                        url: "/vote/" + id,
                         type: "DELETE",
                         beforeSend: function(xhr){
                             xhr.setRequestHeader(header, token);
@@ -44,9 +44,9 @@ $(
                     });
                 }
                 else {
-                    var selectedSiblings = $(this).siblings(".selectedUp, .selectedDown");
+                    var selectedSiblings = currentElement.siblings(".selectedUp, .selectedDown");
                     $.ajax({
-                        url: "vote/" + id + "/" + vote,
+                        url: "/vote/" + id + "/" + vote,
                         type: "POST",
                         beforeSend: function(xhr){
                             xhr.setRequestHeader(header, token);
