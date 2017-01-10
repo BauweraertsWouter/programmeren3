@@ -26,7 +26,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
-- **Extra:** [boot_servlet](boot_servlet)
+- [boot_servlet](boot_servlet) ![Spring Boot][spring_boot]
 
   De meest eenvoudige servlets geimplementeerd met Spring Boot.
 
@@ -83,3 +83,5 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 - [classnotfound](classnotfound)
 
   Een eenvoudige website waar je vragen kan stellen, beantwoorden en up/downvoten (a la StackOverflow of reddit). Gebruikt Spring MVC met Thymeleaf en Hibernate.
+
+[spring_boot]: images/spring-boot-logo_24_22.png
