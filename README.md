@@ -22,7 +22,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig RequestDispatcher voorbeeld.
 
-- [thread_safety](thread_safety)
+- [thread_safety](thread_safety) ![Spring Boot][spring_boot]
 
   Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
