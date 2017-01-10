@@ -14,7 +14,7 @@ buildscript {
 }
 
 jar {
-    baseName = 'boot_servlet'
+    baseName = 'thread_safety'
     version =  '0.1.0'
 }
 
