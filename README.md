@@ -14,7 +14,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig voorbeeld van een servlet context listener.
 
-- [filters](filters)
+- [filters](filters) ![Spring Boot][spring_boot]
 
   Een eenvoudig voorbeeld van filters.
 

@@ -9,7 +9,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/"}, filterName = "second")
+@WebFilter(urlPatterns = {"/Hello"}, filterName = "second")
 public class MySecondFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

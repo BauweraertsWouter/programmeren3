@@ -4,10 +4,10 @@
          version="2.4">
     <filter-mapping>
         <filter-name>first</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/Hello</url-pattern>
     </filter-mapping>
     <filter-mapping>
         <filter-name>second</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/Hello</url-pattern>
     </filter-mapping>
 </web-app>
