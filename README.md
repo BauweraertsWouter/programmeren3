@@ -10,7 +10,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig servlet in een Gradle project met embedded Tomcat.
 
-- [listeners](listeners)
+- [listeners](listeners) ![Spring Boot][spring_boot]
 
   Een eenvoudig voorbeeld van een servlet context listener.
 
