@@ -84,4 +84,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudige website waar je vragen kan stellen, beantwoorden en up/downvoten (a la StackOverflow of reddit). Gebruikt Spring MVC met Thymeleaf en Hibernate.
 
+## Roadmaps
+
+- [hardware_shop](hardware_shop)
+
+  Het start-project voor het maken van de [Hardware Shop](https://programmeren3-repaircafe.rhcloud.com/road-maps/hardware-shop-roadmap-1/).
+
 [spring_boot]: images/spring-boot-logo_24_22.png
