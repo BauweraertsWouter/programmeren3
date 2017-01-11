@@ -84,6 +84,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudige website waar je vragen kan stellen, beantwoorden en up/downvoten (a la StackOverflow of reddit). Gebruikt Spring MVC met Thymeleaf en Hibernate.
 
+- [repaircafe](repaircafe)
+
+  Het grote Repair Cafe project dat beschreven wordt op de [website van programmeren 3](https://programmeren3-repaircafe.rhcloud.com/).
+
 ## Roadmaps
 
 - [hardware_shop](hardware_shop)
