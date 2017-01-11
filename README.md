@@ -1,6 +1,6 @@
 # Programmeren 3
 
-In deze repository vind je voorbeeldcode voor het vak Programmeren 3. Elke directory bevat een afzonderlijk IntelliJ IDEA project.
+In deze repository vind je voorbeeldcode voor het vak Programmeren 3. Elke directory bevat een afzonderlijk IntelliJ IDEA project. Alle projecten zijn voorzien van een [Gradle](https://gradle.org/) wrapper.
 
 Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
