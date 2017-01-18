@@ -40,7 +40,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Het [dispatch](dispatch) voorbeeld omgezet naar JSP anno 1999-2000.
 
-- [blog_jstl](blog_jstl)
+- [blog_jstl](blog_jstl) ![Spring Boot][spring_boot]
 
   Het [dispatch](dispatch) voorbeeld omgezet naar een eenvoudige JSP/JSTL pagina.
 
