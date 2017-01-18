@@ -18,7 +18,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig voorbeeld van filters.
 
-- [dispatch](dispatch)
+- [dispatch](dispatch) ![Spring Boot][spring_boot]
 
   Een eenvoudig RequestDispatcher voorbeeld.
 
