@@ -32,7 +32,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
 ## Week 2
 
-- [session](session)
+- [session](session) ![Spring Boot][spring_boot]
 
   Een voorbeeld van het aanmaken en raadplegen van een sessie.
 

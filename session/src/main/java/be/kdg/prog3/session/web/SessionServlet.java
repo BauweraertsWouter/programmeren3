@@ -1,4 +1,4 @@
-package be.kdg.prog3.web;
+package be.kdg.prog3.session.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
