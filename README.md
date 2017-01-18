@@ -90,6 +90,10 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
 ## Roadmaps
 
+- [webapp](webapp)
+
+  Demo-project met allerhande kleine Java EE klassen (geen Spring). Naar deze demo's wordt gerefereerd als "WebApps103" in de roadmap [Java Web Applicatie RM](https://programmeren3-repaircafe.rhcloud.com/road-maps/jwa-rm/).
+
 - [hardware_shop](hardware_shop)
 
   Het start-project voor het maken van de [Hardware Shop](https://programmeren3-repaircafe.rhcloud.com/road-maps/hardware-shop-roadmap-1/).
