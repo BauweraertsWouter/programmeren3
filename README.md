@@ -46,7 +46,7 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
 ## Week 3
 
-- [di](di)
+- [di](di) ![Spring][spring]
 
   Dependency Injection voorbeelden geimplementeerd met Spring (geen Web).
 
@@ -98,4 +98,5 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Het start-project voor het maken van de [Hardware Shop](https://programmeren3-repaircafe.rhcloud.com/road-maps/hardware-shop-roadmap-1/).
 
+[spring]: images/spring-logo_22_22.png
 [spring_boot]: images/spring-boot-logo_24_22.png
