@@ -22,15 +22,15 @@ Dit zijn de projecten (min of meer) gesorteerd volgens moeilijkheid:
 
   Een eenvoudig RequestDispatcher voorbeeld.
 
-- [thread_safety](thread_safety) ![Spring Boot][spring_boot]
-
-  Enkele kleine servlets die de problematiek rond thread safety illustreren.
-
 - [boot_servlet](boot_servlet) ![Spring Boot][spring_boot]
 
   De meest eenvoudige servlets geimplementeerd met Spring Boot.
 
 ## Week 2
+
+- [thread_safety](thread_safety) ![Spring Boot][spring_boot]
+
+  Enkele kleine servlets die de problematiek rond thread safety illustreren.
 
 - [session](session) ![Spring Boot][spring_boot]
 
