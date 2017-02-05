@@ -7,7 +7,7 @@ apply plugin: 'war'
 apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 gretty {
-    port = 9966
+    httpPort = 9966
 }
 
 sourceCompatibility = 1.8
