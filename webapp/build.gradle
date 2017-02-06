@@ -8,6 +8,10 @@ apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.p
 
 sourceCompatibility = 1.8
 
+gretty{
+    httpPort = 9050
+}
+
 repositories {
     mavenCentral()
 }
